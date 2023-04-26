@@ -1,4 +1,69 @@
 *{
     padding:  0;
-    margin:0;
+    margin:0;    
+    box-sizing: border-box;
 }
+
+body
+{
+    background-image: url('frontend/img/IMG_5391-2.jpg');
+    background-size : cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+.menu-bar
+{
+  background: rgb(134, 134, 255);   
+  text-align: center; 
+}
+
+.menu-bar ul
+{
+  display: inline-flex;
+  list-style: none;
+  color: #fff;
+  font-size: x-small;
+  
+}
+
+.menu-bar ul li
+{
+    width: 100px;
+    margin: 15px;
+    padding: 15 px;
+}
+
+.menu-bar ul li a
+
+{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.menu-bar ul li :hover
+{
+    background: #a3a9ff;
+    border-radius: 3px;
+}
+
+.menu-bar .fa
+{
+    margin-inline: 8px;
+}
+.sub-menu-1
+{
+    display: none;
+}
+
+.menu-bar ul li :hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background-color: #a3a9ff;
+    margin-top: 15px;
+    margin-left: -15px;
+
+}
+
