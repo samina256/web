@@ -6,7 +6,7 @@
 
 body
 {
-    background-image: url('frontend/img/IMG_5391-2.jpg');
+    background-image: url('img/pengu.jpg');
     background-size : cover;
     background-position: center;
     font-family: sans-serif;
@@ -52,18 +52,14 @@ body
 {
     margin-inline: 8px;
 }
-.sub-menu-1
+
+.menu-bar .dropbtn .dropdown-content:hover{
+    background-color: cyan;
+     
+}
+.sub-menu-1 dropdown-content
 {
     display: none;
 }
 
-.menu-bar ul li :hover .sub-menu-1
-{
-    display: block;
-    position: absolute;
-    background-color: #a3a9ff;
-    margin-top: 15px;
-    margin-left: -15px;
-
-}
-
+ 
