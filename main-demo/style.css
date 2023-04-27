@@ -5,9 +5,8 @@
 }
 body
 {
-    background-image: url('main-demo/img/pengu.jpg');
+    background-image: url('img/pengu.jpg');
     background-size : cover;
-    background-position: center;
     font-family: sans-serif;
 }
 
@@ -79,7 +78,7 @@ body
     display: block;
   }
 
-
+/* end of nav bar code  */
 
 
 

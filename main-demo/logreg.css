@@ -1,0 +1,72 @@
+/* CSS for h1 tag id "reg" */
+#reg {
+    color: blue;
+    font-size: 24px;
+    text-align: center;
+    background-color: cyan;
+  }
+  .bd{
+    background-color: rgba(177, 174, 174, 0.841);
+  }
+  
+  /* CSS for form table class "fr" */
+  .fr {
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+  
+  }
+  
+  .fr td,
+  .fr th {
+    /* border: 1px solid #ddd; */
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .fr th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* CSS for form input */
+  input[type=text],
+  input[type=email],
+  input[type=date] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+
+  
+  /* CSS for some of the spans */
+  span {
+    color: red;
+    font-size: 12px;
+  }
+  
+  /* CSS for radio buttons and checkboxes */
+  input[type=radio],
+  input[type=checkbox] {
+    margin: 0 10px 0 0;
+  }
+  
+  /* CSS for submit button */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #0d8bab;
+  }

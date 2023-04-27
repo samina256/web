@@ -1,0 +1,161 @@
+<html>
+<head>
+
+  <link rel="stylesheet" href="logreg.css">
+  <title>Registration Page</title>
+</head>
+
+<body>
+  <h1 id="reg">Registration</h1>
+
+  <form action="#" onsubmit="return formValidation()" class="bd">
+    <table class="fr">
+
+      <tr>
+        <td><label for="fname">First Name :</label></td>
+        <td><input type="text" name="firstname" id="ifname" required>
+          <span id="efname"></span>
+        </td>
+
+      </tr>
+      <tr>
+        <td><label for="lname">Last Name :</label></td>
+        <td><input type="text" name="lasttname" id="ilname" required>
+          <span id="elname"></span>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td><label for="email">Email :</label></td>
+        <td><input type="email" name="email" id="iemail" required>
+          <span id="eemail"></span>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td><label for="mobile">Mobile :</label></td>
+        <td><input type="text" name="mob" id="imob" required>
+          <span id="emob"></span>
+        </td>
+      </tr>
+      
+      <tr>
+        <td><label for="pass">Password :</label></td>
+        <td><input type="text" name="pass" id="ipass" required>
+          <span id="epass"></span>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td><label for="cofirm-pass">Confirm Password :</label></td>
+        <td><input type="text" name="confirm-pass" id="iconfirm-pass" required></td>
+        <span id="econ-pass"></span>
+      </tr>
+      
+      <tr>
+        <td><label for="gender">Gender : </label></td>
+        <td>
+          <input type="radio" name="gender" value="male">
+          <label>Male</label>
+          <input type="radio" name="gender" value="female">
+          <label>Female</label>
+          <input type="radio" name="gender" value="others">
+          <label>Other</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="dob">DOB: </label></td>
+        <td>
+          <input type="date" name="dob" id="idob">
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="2">
+          <input type="submit" id="sub-btn" name="submit-button" value="Register">
+        </td>
+         
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    function formValidation() {
+      // Get form input values
+      var fname = document.getElementById("ifname").value;
+      var lname = document.getElementById("ilname").value;
+      var email = document.getElementById("iemail").value;
+      var mob = document.getElementById("imob").value;
+      var pass = document.getElementById("ipass").value;
+      var confPass = document.getElementById("iconfirm-pass").value;
+      var gender = document.querySelector('input[name="gender"]:checked');
+      var dob = document.getElementById("idob").value;
+      
+      // Define regular expressions for validation
+      var nameRegex = /^[a-zA-Z]+$/;
+      var emailRegex = /^\S+@\S+\.\S+$/;
+      var mobRegex = /^[0-9]{10}$/;
+      var passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+      
+      // Validate first name
+      if (!fname.match(nameRegex)) {
+        document.getElementById("efname").innerHTML = "Please enter a valid first name";
+        return false;
+      }
+      
+      // Validate last name
+      if (!lname.match(fname)) {
+        document.getElementById("elname").innerHTML = "First name and Last name does not match";
+        return false;
+      }
+      
+      // Validate email
+      if (!email.match(emailRegex)) {
+        document.getElementById("eemail").innerHTML = "Please enter a valid email address";
+        return false;
+      }
+      
+      // Validate mobile number
+      if (!mob.match(mobRegex)) {
+        document.getElementById("emob").innerHTML = "Please enter a valid 10-digit mobile number";
+        return false;
+      }
+      
+      // Validate password
+      if (!pass.match(passRegex)) {
+        document.getElementById("epass").innerHTML = "Please enter a valid password (minimum 8 characters with at least one uppercase letter, one lowercase letter, and one number)";
+        return false;
+      }
+      
+      // Validate confirm password
+      if (pass != confPass) {
+        document.getElementById("econ-pass").innerHTML = "Passwords do not match";
+        return false;
+      }
+      
+      // Validate gender
+      if (!gender) {
+        alert("Please select a gender");
+        return false;
+      }
+      
+      // Validate date of birth
+      if (!dob) {
+        alert("Please enter your date of birth");
+        return false;
+      }
+      
+      // Form is valid
+      return true;
+    }
+    </script>
+    
+</body>
+
+
+
+</html>
