@@ -1,0 +1,92 @@
+<html>
+<head>
+
+  <link rel="stylesheet" href="logreg.css">
+  <title>Registration Page</title>
+</head>
+
+<body>
+  <h1 id="reg">Registration</h1>
+
+  <form action="#" onsubmit="return formValidation()" class="bd">
+    <table class="fr">
+
+      
+      <tr>
+        <td><label for="email">Email :</label></td>
+        <td><input type="email" name="email" id="iemail" required>
+          <span id="eemail"></span>
+        </td>
+
+      </tr>
+
+       
+      <tr>
+        <td><label for="pass">Password :</label></td>
+        <td><input type="text" name="pass" id="ipass" required>
+          <span id="epass"></span>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td  >
+            <a href="logreg.html"><input type="submit" id="reg-btn" name="reg-button" value="Register"></a>
+        </td>
+        <td  >
+          <input type="submit" id="sub-btn" name="submit-button" value="submit">
+        </td>
+         
+      </tr>
+      
+       
+    </table>
+  </form>
+
+  <script>
+    function formValidation() {
+      // Get form input values
+ 
+      var email = document.getElementById("iemail").value;
+ 
+      var pass = document.getElementById("ipass").value;
+       
+      
+      // Define regular expressions for validation
+ 
+      var emailRegex = /^\S+@\S+\.\S+$/;
+       
+      var passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+      
+       
+      
+      
+      // Validate email
+      if (!email.match(emailRegex)) {
+        document.getElementById("eemail").innerHTML = "Please enter a valid email address";
+        return false;
+      }
+      
+       
+      
+      // Validate password
+      if (!pass.match(passRegex)) {
+        document.getElementById("epass").innerHTML = "Please enter a valid password (minimum 8 characters with at least one uppercase letter, one lowercase letter, and one number)";
+        return false;
+      }
+      
+       
+      
+      // Form is valid
+      return true;
+    }
+    document.getElementById("reg-btn").addEventListener("click", function() {
+        window.location.href = "logreg.html";
+    });
+    </script>
+    
+</body>
+
+
+
+</html>
